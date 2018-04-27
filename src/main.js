@@ -19,10 +19,14 @@ $(document).ready(function() {
       },
       success: function(response) {
         for (var i = 0; i < `${response.data.length}`; i++) {
-        $('#output').append('<h5>' + `${response.data[i].profile.first_name} ${response.data[i].profile.last_name}` + '</h5>');
-        $('#output').append('<h6>'+'Address: ' + `${response.data[i].practices[i].visit_address.street}`+'</h6>');
-        $('#output').append('<h6>'+'Phone: ' + `${response.data[i].practices[i].phones[0].number}`+'</h6>');
-        $('#output').append('<h6>'+'Currently accepting new patients: ' +"<b>"+ `${response.data[i].practices[i].accepts_new_patients}`+"</b>"+'</h6>');
+          if (`${response.data[i]}` === undefined) {
+            $('#output').text("Sorry, we couldn't find anyone matching those terms.");
+          } else {
+            $('#output').html('<h5>' + `${response.data[i].profile.first_name} ${response.data[i].profile.last_name}` + '</h5>'
+                                +'<h6>'+'Address: ' + `${response.data[i].practices[i].visit_address.street}`+'</h6>'
+                                +'<h6>'+'Phone: ' + `${response.data[i].practices[i].phones[0].number}`+'</h6>'
+                                +'<h6>'+'Currently accepting new patients: ' +"<b>"+ `${response.data[i].practices[i].accepts_new_patients}`+"</b>"+'</h6>');
+          }
         }
       },
       error: function() {
