@@ -2,9 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Dr. Waldo</title>
   </head>
   <body>
-
+    <div class="container-fluid">
+      <div class="formGroup">
+        <h6>Find your Dr:</h6>
+        <form id="formDr" action="index.html" method="post">
+          <input id="findDr" type="text">
+        </form>
+        <button id="showDr" class="btn btn-info" type="submit" name="button">Submit</button>
+      </div>
+      <div class="output-group">
+        <ul id="output" ></ul>
+      </div>
+    </div>
   </body>
 </html>
