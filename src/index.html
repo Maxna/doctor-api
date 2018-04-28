@@ -7,14 +7,19 @@
   <body>
     <div class="container-fluid">
       <div class="formGroup">
-        <h6>Find your Dr:</h6>
+        <h5>Find your Dr!</h5>
         <form id="formDr" action="index.html" method="post">
+          <label for="findDr">Search by Keyword:</label>
           <input id="findDr" type="text">
-        </form>
-        <button id="showDr" class="btn btn-info" type="submit" name="button">Submit</button>
+            <br><h6>-And/Or-</h6>
+          <label for="findName">Search by doctor name:</label>
+          <input id="findName" type="text">
+        </form><br>
+        <button id="showDr" class="btn btn-info" type="button" name="button">Submit</button>
       </div>
-      <div class="output-group">
-        <ul id="output" ></ul>
+      <div id="errors">
+      </div>
+      <div id="output">
       </div>
     </div>
   </body>

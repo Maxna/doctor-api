@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { API } from './../src/doctor.js';
+// import { API } from './../src/doctor.js';
 
 $(document).ready(function() {
   $('#showDr').click(function() {
@@ -10,7 +10,6 @@ $(document).ready(function() {
     $('#findDr').val("");
     let name = $('#findName').val();
     $('#findName').val("");
-    // let api_Key = $(process.env.apiKey);
     $.ajax({
       url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${query}&location=or-portland&skip=0&limit=10&user_key=${process.env.exports.apiKey}`,
       type: 'GET',
