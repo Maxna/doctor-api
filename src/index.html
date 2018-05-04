@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Dr. Waldo</title>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="formGroup">
-        <h5>Find your Dr!</h5>
-        <form id="formDr" action="index.html" method="post">
-          <label for="findDr">Search by Keyword:</label>
-          <input id="findDr" type="text">
-            <br><h6>-And/Or-</h6>
-          <label for="findName">Search by doctor name:</label>
-          <input id="findName" type="text">
-          <button id="showDr" class="btn btn-info" type="submit" name="button">Submit</button>
-        </form><br>
-      </div>
-      <div id="output">
-      </div>
-      <div id="errors">
+<head>
+  <meta charset="utf-8">
+  <title>Dr. Waldo</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h5>Find your Dr!</h5>
+    </div>
+    <div class="formGroup">
+      <form id="formDr" action="index.html" method="post">
+        <label for="findDr">Search by Keyword:</label>
+        <input id="findDr" type="text">
+        <br><h6>-And/Or-</h6>
+        <label for="findName">Search by doctor name:</label>
+        <input id="findName" type="text">
+        <br>
+        <button id="showDr" class="btn btn-danger" type="submit" name="button">Submit</button>
+      </form><br>
+      <div class="info">
+        
       </div>
     </div>
-  </body>
+    <div id="output">
+    </div>
+    <div id="errors">
+    </div>
+  </div>
+</body>
 </html>

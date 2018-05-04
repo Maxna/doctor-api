@@ -1,0 +1,30 @@
+body {
+  background-color: teal;
+
+}
+h5 {
+  font-size: 60px;
+  font-family: monospace;
+  text-align: center;
+  background-color: grey;
+  border-radius: 50%;
+}
+h6 {
+  margin: 5px;
+  background-color: black;
+  color: lightgrey;
+  max-width: 140px;
+  min-width: 140px;
+  font-size: 30px;
+  font-family: cursive;
+}
+label {
+  border-width: medium;
+  border-style: dashed;
+  border-color: wheat;
+  color: skyblue;
+  padding: 8px;
+  margin: 5px;
+  font-size: 35px;
+  font-family: serif;
+}
