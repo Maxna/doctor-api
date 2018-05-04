@@ -22,8 +22,12 @@ $(document).ready(function() {
           $('#output').append('<h5>' + `${response.data[i].profile.first_name} ${response.data[i].profile.last_name}` + '</h5>');
           $('#output').append('<h6>' + 'Address: ' + `${response.data[i].practices[0].visit_address.street}` + '</h6>');
           $('#output').append('<h6>' + 'Phone: ' + `${response.data[i].practices[0].phones[0].number}` + '</h6>');
-          $('#output').append('<h6>' + 'Currently accepting new patients: ' + "<b>" + `${response.data[i].practices[0].accepts_new_patients}` + "</b>" + '</h6><br>');
-          // $('#output').append('<h6>' + 'Website: ' + `${response.data[i].practices[1].website}` + '</h6>');
+          $('#output').append('<h6>' + 'Currently accepting new patients: ' + "<b>" + `${response.data[i].practices[0].accepts_new_patients}` + "</b>" + '</h6>');
+          if (`${response.data[i].practices[0].website}` === "undefined") {
+            $('#output').append('<h6>' + 'Website: No Website Listed' + '</h6><br>')
+          } else {
+          $('#output').append('<h6>' + 'Website: ' + `${response.data[i].practices[0].website}` + '</h6><br>');
+        }
         }
       } else {
         $('#output').text("Sorry, we couldn't find anyone matching those terms.");
